@@ -19,6 +19,8 @@ header{   /* Julius helped me out here */
 }
 #content {
   border: 10px solid rgb(225,232,237);
+  padding-left: 200px;
+  padding-right: 200px;
 
 }
 h1 {
@@ -28,7 +30,6 @@ h1 {
 p {
   width:100%;
   padding-top: 50px;
-  text-align: center;
   padding-bottom: 30px;
 
 }
@@ -39,7 +40,6 @@ p {
   width: 300px;
   height:60px;
   padding-bottom: 60px;
-  border-bottom: thin solid black;
 
 }
 h2 {
@@ -53,12 +53,10 @@ h3{
 }
 
 #ingredients {
-  padding-left: 10%;
   padding-bottom: 40px;
   padding-top: 40px;
 }
 #directions {
-  padding-left: 10%;
   padding-bottom: 40px;
   padding-top: 40px;
 }
@@ -69,3 +67,15 @@ ul > li:before {
     display: inline-block;
     content: "-";
     margin-left: -1em;
+  }
+
+  ol {
+    counter-reset: item;
+  }
+  ol li {
+    list-style: none;
+  }
+  ol li:before{
+    content: counter(item) ") ";
+    counter-increment: item;
+  }
